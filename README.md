@@ -1,21 +1,16 @@
 # BetterEmojibot
 
-**TODO: Add description**
+This bot posts a list of all new emoji added to a slack instance as they are added. 
 
 ## Installation
 
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed
-by adding `better_emojibot` to your list of dependencies in `mix.exs`:
-
-```elixir
-def deps do
-  [
-    {:better_emojibot, "~> 0.1.0"}
-  ]
-end
+In your `.envrc` file, add the following tokens:
+```
+export SLACK_API_TOKEN= (insert token with connections:write permissions here)
+export SLACK_HOOK_URL= (insert webhook URL here, configured to your channel of choice)
 ```
 
-Documentation can be generated with [ExDoc](https://github.com/elixir-lang/ex_doc)
-and published on [HexDocs](https://hexdocs.pm). Once published, the docs can
-be found at <https://hexdocs.pm/better_emojibot>.
+When this is set, run `mix run --no-halt` and leave running indefinitely. 
 
+Enjoy!
+(pull requests accepted)

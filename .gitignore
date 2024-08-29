@@ -26,3 +26,5 @@ better_emojibot-*.tar
 /tmp/
 
 .envrc
+
+list.txt
