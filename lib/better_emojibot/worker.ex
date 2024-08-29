@@ -16,6 +16,7 @@ defmodule BetterEmojibot.Worker do
     |> format_result()
     |> send_message()
 
+    # bot posts every minute. alter runtime here for API limiting reasons
     Process.send_after(self(), :run, :timer.minutes(1))
   end
 
@@ -53,6 +54,8 @@ defmodule BetterEmojibot.Worker do
   end
 
   def format_result(result) do
+    # post is simply emoji - emoji name. This is designed to handle multiple as new ones are added
+    # Adjust messaging here as needed
     Enum.map_join(result, "\n", fn {name, _} ->
       ":#{name}: - #{name}"
     end)
