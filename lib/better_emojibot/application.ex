@@ -9,7 +9,7 @@ defmodule BetterEmojibot.Application do
   def start(_type, _args) do
     children = [
       # Starts a worker by calling: BetterEmojibot.Worker.start_link(arg)
-      # {BetterEmojibot.Worker, arg}
+     BetterEmojibot.Worker
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html
